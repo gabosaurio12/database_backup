@@ -1,25 +1,31 @@
 # Database Automatic Backup Generator
-Bash scripts that use mysqldump to generate a backup of a database everyday at an especific hour.
+Bash scripts to automate daily backups of a MySQL/MariaDB database using `mysqldump`, scheduled at a specific time.
 
 ## Features
-- Databases backup
-- Automatized procedures
+- Automated databases backup
+- Easy setup with `cron`
+- Customizable backup time
 
 ## Technologies
-- Shebash
-- Crontab
-- Mysqldump (Mariadbdump)
+- Bash (`#!/bin/bash`)
+- `cron` (Crontab)
+- `mysqldump` / `mariadb-dump`
 
-## How to execute
+## How to run
 
-1. Clone the repo:
+1. Clone the repository:
  ```bash
    git clone https://github.com/gabosaurio12/database_backup.git
-   cd database_backup.git
+   cd database_backup
 ```
-2. Run config_crontab.sh
+2.Grant execute permissions to the scripts
+```
+  chmod +x ./scripts/crontab_config.sh
+  chmod +x ./scripts/daily_backup.sh
+```
+3. Run the configuration script
 ```bash
-  ./scripts/config_crontab.sh
+  ./scripts/crontab_config.sh
 ```
 
 ## Author
